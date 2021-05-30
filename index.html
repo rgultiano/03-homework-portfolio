@@ -3,27 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title>Ron's Portfolio</title>
-        <!-- Link to stylesheet -->
-        <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- Link to stylesheets -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     </head>
     <body>
         <header>
             <nav>
                 <!-- nav containing profile pic, name, links to sections-->
-                <div>
+                <div class="nav-profile">
                     <!-- left div for profile pic and name -->
-                    <!-- TO DO: Update image with actual picture -->
-                    <img src="./assets/img/profile.jpg">
+                    <img src="./assets/img/avatar.svg" alt="Headshot of profile pictures">
                     <h1>Ronnel Gultiano</h1>
                 </div>
-                <div>
-                    <!-- right div for links -->
-                    <ul>
-                        <il><a href="#sec-about">About Me</a></il>
-                        <il><a href="#sec-work">My Work</a>k</il>
-                        <il><a href="#sec-contact">Contact</a></il>
-                    </ul>
-                </div>
+                <!-- nav links -->
+                <ul class="nav-links">
+                    <li><a href="#sec-about">About Me</a></li>
+                    <li><a href="#sec-work">My Work</a></li>
+                    <li><a href="#sec-contact">Contact</a></li>
+                </ul>
             </nav>
         </header>
         <main>
