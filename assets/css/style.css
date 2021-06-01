@@ -43,6 +43,8 @@ nav{
     padding-left: 10px;
 }
 
+
+
 /* Format navigation links */
 nav ul.nav-links{
     display: flex;
@@ -68,6 +70,34 @@ nav ul.nav-links li a{
 
 nav ul.nav-links li a:hover{
     border-bottom: 3px solid var(--nav-font-color);
+}
+
+/*** mobile css for nav ***/
+@media only screen and (max-width: 768px) {
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: auto;
+    }
+    .nav-profile{
+        flex: 1 1 100%;
+        display: inline-block;
+        position: relative;
+        height: auto;
+        text-align: center;
+    }
+    
+    nav ul.nav-links {
+        flex: 1 1 100%;
+        position: relative;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: auto;
+        padding-top: 1em;
+        font-size: 1.2em;
+    }
+
 }
 
 /**********
@@ -108,6 +138,33 @@ main
     padding-bottom: 1em;
 }
 
+
+/*** mobile css for main content ***/
+@media only screen and (max-width: 768px) {
+    .main-sec {
+        text-align: center;
+    }
+
+    .main-sec .sec-header {
+        width: auto;
+
+        border-bottom: 3px solid var(--color-primary);
+        padding-bottom: 0.1em;
+        margin-bottom: 0.5em;
+        padding-left: 0;
+        margin-left: 0.1em;
+    }
+
+    .main-sec .sec-content{
+        border-left: none;
+        display: inline-block;
+        width: 95%;
+        padding:0px 1em 1em 10px;
+        min-height: 3em;
+        text-align: left;
+    }
+}
+
 /*** set alternating colors for sections, to add contrast between sections */
 .main-sec:nth-child(odd) {
     background-color: var(--color-secondary);
@@ -139,9 +196,9 @@ main
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 10px;
-    row-gap: 10px;
-    padding: 10px;
+    column-gap: 15px;
+    row-gap: 5px;
+
 }
 .work-collection  .work-container:first-child{
     flex: 1 1 100%;
@@ -172,6 +229,14 @@ main
     color: var(--color-work-text-normal);
 }
 
+/*** mobile css for work section **/
+@media only screen and (max-width: 768px) {
+    .work-collection .work-container .work-text h4 {
+        font-size: 1.2em;
+    }
+    
+}
+
 /* contact section styles */
 #sec-contact .sec-content{
     position: relative;
@@ -187,10 +252,7 @@ main
     justify-content: space-evenly;
     width: 100%;
 }
-#sec-contact .sec-content ul li{
-    flex: 1 1;
 
-}
 
 #sec-contact .sec-content a {
     text-decoration: none;
@@ -199,4 +261,31 @@ main
     border-bottom: 0.15em solid var(--content-text-color);
     padding-bottom: 0.2em;
     font-size: 1.1em;
+}
+
+/*** mobile css for contact section ***/
+@media only screen and (max-width: 768px) {
+    #sec-contact .sec-content ul {
+        position:relative;
+        flex-wrap: wrap;
+        top: auto;
+        flex-direction: column;
+        transform: initial;
+        -ms-transform:initial;
+        text-align: center;
+    }
+
+    #sec-contact .sec-content ul li {
+        flex: 1 1 ;
+    }
+
+    #sec-contact .sec-content a {
+        text-decoration: underline;
+        color:  var(--content-text-color);
+        flex: 1 1 100%;
+        border-bottom: none;
+        padding-bottom: 0.2em;
+        font-size: 1.3em;
+        line-height: 1.8em;
+    }
 }
