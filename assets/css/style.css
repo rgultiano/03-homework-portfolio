@@ -2,14 +2,21 @@
     --nav-font-color: #094e28;
     --nav-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --nav-header-height: 56px;
+    --content-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --content-text-color: black;
     --color-primary: #ee625d;
     --color-secondary: #a1980f;
+    --color-tertiary: #73bd5d;
+    --color-work-accent: white;
+    --color-work-text-emphasis: black;
+    --color-work-text-normal: rgb(112, 112, 112);
 }
 
 /**********
 Navbar
 ***********/
 nav{
+
     display: flex;
     background-color: var(--color-primary);
     justify-content: space-between;
@@ -54,11 +61,142 @@ nav ul.nav-links li a{
     text-decoration: none;
     color: var(--nav-font-color);
     font-family: var(--nav-font-family);
-    border-bottom: 3px double transparent;
+    border-bottom: 3px double var(--nav-font-color);
     display: inline-block;
     margin: 0 10px;
 }
 
 nav ul.nav-links li a:hover{
-    border-bottom: 3px double var(--nav-font-color);
+    border-bottom: 3px solid var(--nav-font-color);
+}
+
+/**********
+main
+***********/
+
+/*** general style of sections within main **/
+
+/* set title to the left */
+.main-sec{
+    padding: 10px;
+    font-family: var(--content-font-family);
+    color: var(--content-text-color);
+}
+
+.main-sec .sec-header{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    text-align: right;
+    padding: 10px 10px 10px 10px;
+
+    
+}
+.main-sec .sec-content{
+    display: inline-block;
+    width: 70%;
+    border-left: 3px solid var(--color-primary);
+    padding:0px 10px 0px 10px;
+    min-height: 3em;
+}
+
+
+.main-sec h2 {
+    font-size: 1.8em;
+    font-family: var(--nav-font-family);
+    color: rgb(0,0,0,0.7);
+    padding-bottom: 1em;
+}
+
+/*** set alternating colors for sections, to add contrast between sections */
+.main-sec:nth-child(odd) {
+    background-color: var(--color-secondary);
+}
+
+.main-sec:nth-child(even)
+{
+    background-color: var(--color-tertiary);
+}
+
+/*** Styles for unique sections ***/
+/* about section styles */
+
+
+#sec-about p{
+    font-size: 1em;
+    line-height: 1.4;
+    padding-bottom: 1em;
+}
+
+/* my work section styles */
+
+.work-collection .work-container img{
+    width: 100%;
+    border: 3px solid var(--color-work-accent);;
+}
+
+.work-collection  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+}
+.work-collection  .work-container:first-child{
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.work-collection .work-container{
+    flex: 1 1 40%;
+    position: relative;
+}
+
+.work-collection .work-container .work-text {
+    background-color: var(--color-work-accent);
+    display: inline-block;
+    padding: 5px 8px 5px 10px;
+    font-family: var(--nav-font-family);
+    bottom: 10px;
+    position:absolute;
+    z-index: 3;
+}
+
+.work-collection .work-container .work-text h4 {
+    color: var(--color-work-text-emphasis);
+    font-size: 1.5em;
+}
+
+.work-collection .work-container .work-text span {
+    color: var(--color-work-text-normal);
+}
+
+/* contact section styles */
+#sec-contact .sec-content{
+    position: relative;
+}
+
+#sec-contact .sec-content ul {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    white-space:nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#sec-contact .sec-content ul li{
+    flex: 1 1;
+
+}
+
+#sec-contact .sec-content a {
+    text-decoration: none;
+    color:  var(--content-text-color);
+    flex: 1 1 100%;
+    border-bottom: 0.15em solid var(--content-text-color);
+    padding-bottom: 0.2em;
+    font-size: 1.1em;
 }
