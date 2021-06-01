@@ -50,7 +50,8 @@ nav ul.nav-links{
     display: flex;
     list-style: none;
     white-space:nowrap;
-    align-items:flex-end;
+    align-items:center;
+    flex-direction: row;
     height: var(--nav-header-height);
 }
 
@@ -62,6 +63,7 @@ nav ul.nav-links li{
 nav ul.nav-links li a{
     text-decoration: none;
     color: var(--nav-font-color);
+    font-size: 1.4em;
     font-family: var(--nav-font-family);
     border-bottom: 3px double var(--nav-font-color);
     display: inline-block;
@@ -97,6 +99,7 @@ nav ul.nav-links li a:hover{
         padding-top: 1em;
         font-size: 1.2em;
     }
+    
 
 }
 
@@ -108,7 +111,7 @@ main
 
 /* set title to the left */
 .main-sec{
-    padding: 10px;
+    padding: 1.5em 0em 1.5em 1em;
     font-family: var(--content-font-family);
     color: var(--content-text-color);
 }
@@ -189,15 +192,34 @@ main
 
 .work-collection .work-container img{
     width: 100%;
-    border: 3px solid var(--color-work-accent);;
+
+}
+
+/* add a tint to the image */
+.work-collection .work-container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all .3s linear;
+    border: 3px solid var(--color-work-accent);
+}
+
+.work-collection .work-container:hover:before {
+    background: none;
+    cursor: pointer;
 }
 
 .work-collection  {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 15px;
-    row-gap: 5px;
+    column-gap: 10px;
+    row-gap: 10px;
 
 }
 .work-collection  .work-container:first-child{
