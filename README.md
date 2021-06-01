@@ -3,6 +3,7 @@
 
 ## Table of Contents
 * [General info](#general-info)
+* [Screenshot] (#screenshot)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [User Story](#User-Story)
@@ -10,6 +11,8 @@
 
 ## General Info
 This is the source code for a portfolio of work can showcase your skills and talents to employers looking to fill a part-time or full-time position. 
+
+## Screenshot
 ![Screenshot of the Portfolio Page](Screenshot-1.png "Screenshot of the Portfolio")
 
 ## Technologies
