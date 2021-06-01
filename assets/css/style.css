@@ -224,12 +224,12 @@ main
     row-gap: 10px;
 
 }
-.work-collection  .work-container:first-child{
+.work-collection  a:first-child{
     flex: 1 1 100%;
     position: relative;
 }
 
-.work-collection .work-container{
+.work-collection a{
     flex: 1 1 40%;
     position: relative;
 }
