@@ -12,6 +12,7 @@
     --color-work-text-normal: rgb(112, 112, 112);
 }
 
+
 /**********
 Navbar
 ***********/
@@ -58,12 +59,12 @@ nav ul.nav-links{
 nav ul.nav-links li{    
     display: inline-block;
     margin-bottom: 5px;
+    font-size: 1.4em;
 }
 
 nav ul.nav-links li a{
     text-decoration: none;
     color: var(--nav-font-color);
-    font-size: 1.4em;
     font-family: var(--nav-font-family);
     border-bottom: 3px double var(--nav-font-color);
     display: inline-block;
@@ -99,6 +100,9 @@ nav ul.nav-links li a:hover{
         padding-top: 1em;
         font-size: 1.2em;
     }
+    nav ul.nav-links li{    
+        font-size: 1em;
+    }
     
 
 }
@@ -111,7 +115,6 @@ main
 
 /* set title to the left */
 .main-sec{
-    padding: 1.5em 0em 1.5em 1em;
     font-family: var(--content-font-family);
     color: var(--content-text-color);
 }
@@ -121,15 +124,15 @@ main
     width: 20%;
     vertical-align: top;
     text-align: right;
-    padding: 10px 10px 10px 10px;
+    padding: 0.5em 0.2em 0em 0em;   
 
-    
 }
 .main-sec .sec-content{
+    margin: 1em 0em 1em 0em;
+    padding: 0em 1em 0em 1em;
     display: inline-block;
     width: 70%;
     border-left: 3px solid var(--color-primary);
-    padding:0px 10px 0px 10px;
     min-height: 3em;
 }
 
@@ -145,24 +148,23 @@ main
 /*** mobile css for main content ***/
 @media only screen and (max-width: 768px) {
     .main-sec {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .main-sec .sec-header {
-        width: auto;
-
+        flex-grow: 0;
+        align-self: center;
+        width:fit-content;
         border-bottom: 3px solid var(--color-primary);
-        padding-bottom: 0.1em;
         margin-bottom: 0.5em;
-        padding-left: 0;
         margin-left: 0.1em;
     }
 
     .main-sec .sec-content{
         border-left: none;
         display: inline-block;
-        width: 95%;
-        padding:0px 1em 1em 10px;
+        width: auto;
         min-height: 3em;
         text-align: left;
     }
