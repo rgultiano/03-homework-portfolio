@@ -129,7 +129,7 @@ main
 }
 .main-sec .sec-content{
     margin: 1em 0em 1em 0em;
-    padding: 0em 1em 0em 1em;
+    padding: 0em 1.5em 0em 1.5em;
     display: inline-block;
     width: 70%;
     border-left: 3px solid var(--color-primary);
@@ -309,7 +309,7 @@ main
         flex: 1 1 100%;
         border-bottom: none;
         padding-bottom: 0.2em;
-        font-size: 1.3em;
+        font-size: 1.2em;
         line-height: 1.8em;
     }
 }
